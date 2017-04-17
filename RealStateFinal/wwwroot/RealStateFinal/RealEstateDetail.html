@@ -1,0 +1,124 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <fieldset>
+            <fieldset>
+                <label>Franchise Name: </label>
+                <input type="text" value="{{model.RealEstateName$::input}}"/>
+            </fieldset>
+
+
+            <fieldset>
+                <label>Street: </label>
+                <input type="text" value="{{model.Street$::input}}"/>
+            </fieldset>
+
+
+            <fieldset>
+                <label>Number: </label>
+                <input type="text" value="{{model.Number$::input}}"/>
+            </fieldset>
+
+            <fieldset>
+                <label>ZipCode: </label>
+                <input type="text" value="{{model.ZipCode$::input}}"/>
+            </fieldset>
+
+
+            <fieldset>
+                <label>City: </label>
+                <input type="text" value="{{model.City$::input}}"/>
+            </fieldset>
+
+            <fieldset>
+                <label>Country: </label>
+                <input type="text" value="{{model.Country$::input}}"/>
+            </fieldset>
+
+            <button class="btn btn-sm btn-default" value="{{model.SaveOffice$::click}}" onmousedown="++this.value">Save Franchise Office</button>
+            <button class="btn btn-sm btn-default" value="{{model.CancelTrigger$::click}}" onmousedown="++this.value">Cancle Franchise Office</button>
+
+
+            <!--<input type="text" value="{{model.HouseName$::input}}"/>-->
+
+            <br/>
+            <br/>
+            <h2>Create New House</h2>
+            <br/>
+            <fieldset>
+                <label>Number: </label>
+                <input type="text" value="{{model.HouseNumber$::input}}"/>
+            </fieldset>
+            <fieldset>
+                <label>Street: </label>
+                <input type="text" value="{{model.HouseStreet$::input}}"/>
+            </fieldset>
+            <fieldset>
+                <label>Zip: </label>
+                <input type="text" value="{{model.HouseZip$::input}}"/>
+            </fieldset>
+
+            <fieldset>
+                <label>City: </label>
+                <input type="text" value="{{model.HouseCity$::input}}"/>
+            </fieldset>
+
+            <fieldset>
+                <label>Country: </label>
+                <input type="text" value="{{model.HouseCountry$::input}}"/>
+            </fieldset>
+
+
+            <br/>
+            <br/>
+
+            <h2>Transaction</h2>
+            <fieldset>
+                <label>Date: (YYYY-MM-DD) </label>
+                <input type="text" value="{{model.SaleDate$::input}}"/>
+            </fieldset>
+            <fieldset>
+                <label>Price: </label>
+                <input type="text" value="{{model.HousePrice$::input}}"/>
+            </fieldset>
+
+            <fieldset>
+                <label>Price: </label>
+                <input type="text" value="{{model.HouseCommission$::input}}"/>
+            </fieldset>
+
+            <button class="btn btn-sm btn-default" value="{{model.SaveHome$::click}}" onmousedown="++this.value">Save Home Details</button>
+
+            <h2>List of Houses</h2>
+            <table class="table table-striped table-hover table-sortable-list">
+                <thead>
+                <tr>
+                <td>Date</td>
+                <td>Sales Price</td>
+                <td> Commission</td>
+                <td> Address</td>
+                </>
+                </thead>
+                <tbody>
+                <template is="dom-repeat" items="{{model.HouseList}}">
+                    <tr>
+                        <td>
+                            <label> {{item.Date}} </label>
+                        </td>
+                        <td>
+                            <label> {{item.Price}} </label>
+                        </td>
+                        <td>
+                            <label> {{item.Commission}} </label>
+                        </td>
+                        <td>
+                            <label> {{item.Address}} </label>
+                        </td>
+                    </tr>
+                </template>
+                </tbody>
+            </table>
+        </fieldset>
+    </template>
+</template>

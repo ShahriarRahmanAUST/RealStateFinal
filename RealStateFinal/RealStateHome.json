@@ -1,0 +1,26 @@
+{
+  "Html": "/RealStateFinal/RealStateHome.html",
+  "CompanyName": "",
+  "CreateOffice$": 0,
+
+  "OpenModal": false,
+
+  "CancelTrigger$": 0,
+  "CreateTrigger$": 0,
+  "SortHomeSaleTrigger$": 0,
+  "SortTotalCommissionTrigger$": 0,
+  "SortAverageCommissionTrigger$": 0,
+
+  "Offices": [
+    {
+      "OfficeName": "",
+      "Link": "",
+      "TotalSoldHouse": 0,
+      "TotalCommission": 0,
+      "AverageCommission": 0
+    }
+  ],
+  "NewOffice": {
+    "OfficeName$": ""
+  }
+}

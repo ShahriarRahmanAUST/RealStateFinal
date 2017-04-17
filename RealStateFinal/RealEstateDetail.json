@@ -1,0 +1,44 @@
+{
+  "Html": "/RealStateFinal/RealEstateDetail.html",
+  "RealEstateName$": "",
+  "Street$": "",
+  "Number$": "",
+  "ZipCode$": 0,
+  "City$": "",
+  "Country$": "",
+
+  "SaveOffice$": 0,
+  "CancelTrigger$": 0,
+
+  "SaleDate$": "",
+  "HousePrice$": 0,
+  "HouseCommission$": 0,
+  "HouseCity$": "",
+  "HouseCountry$": "",
+  "HouseZip$": 0,
+  "HouseStreet$": "", 
+  "HouseNumber$":  0 ,
+
+  "SaveHome$": 0,
+
+
+  "HouseList": [
+    {
+      "HouseStreet": "",
+      "HouseNumber": 0,
+      "ZipCode": 0,
+      "City": "",
+      "Country": "",
+      "Price": 0,
+      "Pr1": 0,
+      "Commission": 0,
+      "Date": "",
+      "DT1": "",
+      "Address": ""
+    }
+  ],
+
+
+
+
+}

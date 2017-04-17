@@ -1,0 +1,59 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<link href="/sys/paper-dialog/paper-dialog.html" rel="import" />
+<!--<link rel="stylesheet" href="/RealStateFranchise/style.css"/>-->
+
+<template>
+    <template is="dom-bind">
+
+        <a href="/RealStateFinal">Home</a>
+
+        <H1>Francise Offices of {{model.CompanyName}}</H1>
+        <button class="btn btn-sm btn-default" value="{{model.CreateOffice$::click}}" onmousedown="++this.value">Create Franchise Office</button>
+        <table class="table table-striped table-hover table-sortable-list">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of Homes Sold <button value="{{model.SortHomeSaleTrigger$::click}}" onmousedown="++this.value">Sort</button></th>
+                <th>Total Comission <button value="{{model.SortTotalCommissionTrigger$::click}}" onmousedown="++this.value">Sort</button></th>
+                <th>Average Comission <button value="{{model.SortAverageCommissionTrigger$::click}}" onmousedown="++this.value">Sort</button></th>
+            </tr>
+            </thead>
+            <tbody>
+            <template is="dom-repeat" items="{{model.Offices}}">
+                <tr>
+                    <td>
+                        <a href="{{item.Link}}">{{item.OfficeName}}</a>
+                    </td>
+                    <td>
+                        <label>{{item.TotalSoldHouse}}</label>
+                    </td>
+                    <td>
+                        <label>{{item.TotalCommission}}</label>
+                    </td>
+                    <td>
+                        <label>{{item.AverageCommission}}</label>
+                    </td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+
+        <paper-dialog id="actions" opened="[[model.OpenModal]]" modal="true">
+            <div>
+                <h2>Create Franchise Office</h2>
+                <table style="width: 400px">
+                    <tr>
+                        <td><label>Name:</label></td>
+                        <td style="width: 8px"></td>
+                        <td><input type="text" value="{{model.NewOffice.OfficeName$::input}}" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-sm btn-default" dialog-dismiss value="{{model.CancelTrigger$::click}}" onmousedown="++this.value;">Cancel</button>
+                <span>&nbsp;</span>
+                <button class="btn btn-sm btn-primary" dialog-confirm autofocus value="{{model.CreateTrigger$::click}}" onmousedown="++this.value;">Save</button>
+            </div>
+        </paper-dialog>
+    </template>
+</template>
